@@ -10,9 +10,9 @@ app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true })); //urlencodednp
 app.use(cors()); //cors
 
-const busRoute = require("./Routes/BusRoute");
-const PaymentRoute = require("./Routes/PaymentRoute");
-const UserRoute = require("./Routes/UserRoute");
+const adminRoute = require("./Routes/adminRoute");
+const sellerRoute = require("./Routes/sellerRoute");
+const buyerRoute = require("./Routes/buyerRoute");
 //const entryRoute=require('./Routes/EntryRoutes')
 
 console.log(process.env.DATABASE);
@@ -26,9 +26,9 @@ mongoose
     useUnifiedTopology: true,
   })
   .then(() => console.log("DB connection successful!"));
-app.use("/bus", busRoute);
-app.use("/payment", PaymentRoute);
-app.use("/user", UserRoute);
+app.use("/admin",adminRoute);
+app.use("/seller", sellerRoute);
+app.use("/buyer", buyerRoute);
 //app.use('/entry',entryRoute);
 const port = process.env.PORT || 4000;
 const server = app.listen(port, () => {
