@@ -26,7 +26,7 @@ mongoose
     useUnifiedTopology: true,
   })
   .then(() => console.log("DB connection successful!"));
-app.use("/admin",adminRoute);
+app.use("/admin", adminRoute);
 app.use("/seller", sellerRoute);
 app.use("/buyer", buyerRoute);
 //app.use('/entry',entryRoute);
