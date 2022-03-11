@@ -1,29 +1,14 @@
-// routes
-import Router from './routes';
-// theme
-import ThemeConfig from './theme';
-import GlobalStyles from './theme/globalStyles';
-// components
-import Settings from './components/settings';
-import RtlLayout from './components/RtlLayout';
-import ScrollToTop from './components/ScrollToTop';
-import { ProgressBarStyle } from './components/LoadingScreen';
-import ThemePrimaryColor from './components/ThemePrimaryColor';
+import React, { useState } from "react";
+import "./App.css";
 
-// ----------------------------------------------------------------------
-
-export default function App() {
-  return (
-    <ThemeConfig>
-      <ThemePrimaryColor>
-        <RtlLayout>
-          <GlobalStyles />
-          <ProgressBarStyle />
-          <Settings />
-          <ScrollToTop />
-          <Router />
-        </RtlLayout>
-      </ThemePrimaryColor>
-    </ThemeConfig>
-  );
+function App() {
+  return <div>hii</div>;
+  // return React.createElement(
+  //   "div",
+  //   {},
+  //   React.createElement("h2", {}, "Let's get started"),
+  //   React.createElement(Expenses,{item:expenses})
+  // );
 }
+
+export default App;
